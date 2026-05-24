@@ -367,6 +367,71 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
 .cl-progress-label{font-size:12px;color:var(--gold);font-weight:500;text-align:center;margin-bottom:7px;}
 .cl-countdown{font-family:'Cinzel',serif;font-size:11px;color:var(--muted);text-align:center;margin-top:6px;letter-spacing:1px;}
 
+
+/* ── EMERGENCY CONTACTS ── */
+.contacts-view{display:none;}
+.contacts-hero{width:100%;height:110px;overflow:hidden;border-radius:10px;margin-bottom:15px;position:relative;border:1px solid var(--border2);}
+.contacts-hero img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(0.3) saturate(0.5) sepia(0.4);display:block;}
+.contacts-hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent,rgba(12,11,9,0.9));}
+.contacts-hero-txt{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:3px;opacity:0.75;}
+.contacts-section{background:var(--s1);border-radius:10px;margin-bottom:12px;border:1px solid var(--border);overflow:hidden;}
+.contacts-section-hdr{padding:10px 14px;display:flex;align-items:center;gap:9px;background:var(--s2);border-bottom:1px solid var(--border);}
+.contacts-section-icon{font-size:14px;opacity:0.7;}
+.contacts-section-title{font-size:12px;font-weight:600;color:var(--gold);flex:1;letter-spacing:0.3px;}
+.contact-row{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);}
+.contact-row:last-child{border-bottom:none;}
+.contact-label{font-size:11px;color:var(--muted);width:110px;flex-shrink:0;}
+.contact-value{flex:1;font-size:12px;color:var(--text);font-weight:500;}
+.contact-call{font-size:18px;cursor:pointer;opacity:0.6;transition:opacity 0.2s;flex-shrink:0;}
+.contact-call:hover{opacity:1;}
+.contacts-editable{background:var(--s1);border:1px solid var(--border2);border-radius:6px;padding:6px 8px;font-size:12px;color:var(--text);width:100%;font-family:'Inter',sans-serif;outline:none;}
+.contacts-editable:focus{border-color:rgba(196,164,90,0.35);}
+.contacts-editable::placeholder{color:var(--muted);opacity:0.5;}
+.contacts-save-btn{background:rgba(196,164,90,0.1);border:1px solid rgba(196,164,90,0.25);border-radius:8px;padding:9px;font-size:12px;color:var(--gold);cursor:pointer;width:100%;font-family:'Cinzel',serif;letter-spacing:1px;transition:all 0.2s;margin-top:8px;}
+.contacts-save-btn:hover{background:rgba(196,164,90,0.18);}
+.contacts-saved{font-size:10px;color:var(--teal);text-align:center;margin-top:6px;height:13px;}
+.med-info-card{background:rgba(136,64,64,0.08);border:1px solid rgba(136,64,64,0.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;}
+.med-info-title{font-size:11px;color:#b07070;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.med-info-row{display:flex;gap:8px;padding:4px 0;border-bottom:1px solid rgba(136,64,64,0.1);font-size:11px;}
+.med-info-row:last-child{border-bottom:none;}
+.med-info-key{color:var(--muted);width:100px;flex-shrink:0;}
+.med-info-val{color:var(--text);flex:1;}
+
+/* ── MEMORY LETTER + TRIP REPORT ── */
+.memories-letter-view{display:none;}
+.mem-letter-tabs{display:flex;gap:8px;margin-bottom:16px;}
+.mem-letter-tab{flex:1;padding:9px 6px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;border:1px solid var(--border2);background:var(--s1);color:var(--muted);text-align:center;transition:all 0.2s;}
+.mem-letter-tab.active{background:var(--s2);color:var(--gold);border-color:rgba(196,164,90,0.3);}
+/* letter */
+.letter-wrap{background:var(--s1);border-radius:10px;padding:16px;border:1px solid var(--border2);margin-bottom:12px;}
+.letter-prompt{font-size:10px;color:var(--muted);margin-bottom:6px;font-style:italic;}
+.letter-textarea{width:100%;background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:11px 12px;font-size:13px;color:var(--text);font-family:'Inter',sans-serif;line-height:1.8;outline:none;resize:none;min-height:140px;}
+.letter-textarea:focus{border-color:rgba(196,164,90,0.35);}
+.letter-textarea::placeholder{color:var(--muted);opacity:0.45;}
+.letter-save-btn{background:rgba(196,164,90,0.1);border:1px solid rgba(196,164,90,0.25);border-radius:8px;padding:9px;font-size:12px;color:var(--gold);cursor:pointer;width:100%;font-family:'Cinzel',serif;letter-spacing:1px;transition:all 0.2s;margin-top:8px;}
+.letter-save-btn:hover{background:rgba(196,164,90,0.18);}
+.letter-saved{font-size:10px;color:var(--teal);text-align:center;margin-top:6px;height:13px;}
+.letter-preview{background:var(--s2);border-radius:8px;padding:14px;margin-top:10px;font-size:12px;color:var(--text);line-height:1.8;white-space:pre-wrap;display:none;border:1px solid var(--border);}
+/* report card */
+.report-card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px;}
+.report-stat{background:var(--s1);border-radius:10px;padding:12px 13px;border:1px solid var(--border2);text-align:center;}
+.report-stat-icon{font-size:22px;margin-bottom:5px;opacity:0.7;}
+.report-stat-val{font-size:20px;font-weight:700;color:var(--gold);font-family:'Cinzel',serif;}
+.report-stat-label{font-size:9px;color:var(--muted);margin-top:3px;letter-spacing:0.5px;text-transform:uppercase;}
+.report-grade{background:var(--s2);border-radius:10px;padding:14px;border:1px solid var(--border);margin-bottom:12px;text-align:center;}
+.report-grade-title{font-family:'Cinzel',serif;font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:8px;}
+.report-grade-val{font-size:48px;line-height:1;}
+.report-grade-sub{font-size:11px;color:var(--muted);margin-top:6px;}
+.report-section{background:var(--s1);border-radius:10px;padding:13px;border:1px solid var(--border);margin-bottom:10px;}
+.report-section-title{font-size:11px;font-weight:600;color:var(--gold);margin-bottom:10px;}
+.report-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);font-size:11px;}
+.report-row:last-child{border-bottom:none;}
+.report-row-label{color:var(--muted);}
+.report-row-val{font-weight:600;color:var(--text);}
+.report-row-val.good{color:var(--teal);}
+.report-row-val.warn{color:var(--gold);}
+.report-row-val.bad{color:var(--red);}
+
 .shiva-ghost{position:fixed;bottom:0;right:0;width:130px;height:190px;pointer-events:none;z-index:0;overflow:hidden;}
 .shiva-ghost img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.07) saturate(0.3);opacity:0.6;-webkit-mask-image:linear-gradient(to top left,rgba(0,0,0,0.5) 0%,transparent 70%);mask-image:linear-gradient(to top left,rgba(0,0,0,0.5) 0%,transparent 70%);}
 .footer{text-align:center;padding:28px 18px 20px;font-size:10px;color:var(--muted);opacity:0.3;letter-spacing:2px;font-family:'Cinzel',serif;position:relative;z-index:1;}
@@ -400,6 +465,8 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
     <div class="nav-btn" onclick="showView('weather',this)">&#127774; Weather</div>
     <div class="nav-btn" onclick="showView('itinerary',this)">&#128205; Itinerary</div>
     <div class="nav-btn" onclick="showView('checklist',this)">&#9989; Pre-Trip</div>
+    <div class="nav-btn" onclick="showView('contacts',this)">&#128222; Contacts</div>
+    <div class="nav-btn" onclick="showView('memories_letter',this)">&#128140; Memory</div>
   </div>
   <!-- PACKING VIEW -->
   <div id="packingView">
@@ -625,7 +692,10 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
   <!-- WEATHER VIEW -->
   <div id="weatherView" class="weather-view" style="display:none">
     <div class="exp-hero"><img src="" id="weatherHeroImg" alt="Adiyogi"><div class="exp-hero-ov"></div><div class="exp-hero-txt">Weather at the Dhams</div></div>
-    <div class="weather-refresh" onclick="loadWeather()">&#127774; Refresh Live Weather</div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+      <div class="weather-refresh" onclick="loadWeather()" style="margin-bottom:0;flex:1;">&#127774; Refresh Now</div>
+    </div>
+    <div style="font-size:10px;color:var(--muted);text-align:center;margin-bottom:12px;opacity:0.6;" id="weatherTimestamp">Auto-refreshes every 3 hours while page is open</div>
     <div class="weather-grid" id="weatherGrid">
       <div class="weather-loading" style="grid-column:1/-1">Tap refresh to load live weather for all 4 dhams...</div>
     </div>
@@ -664,6 +734,125 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
       <div class="cl-countdown" id="clCountdown"></div>
     </div>
     <div id="clContainer"></div>
+  </div>
+
+
+  <!-- EMERGENCY CONTACTS VIEW -->
+  <div id="contactsView" class="contacts-view" style="display:none">
+    <div class="contacts-hero"><img id="contactsHeroImg" alt="Adiyogi"><div class="contacts-hero-ov"></div><div class="contacts-hero-txt">Emergency Contacts</div></div>
+
+    <!-- Medical info card -->
+    <div class="med-info-card">
+      <div class="med-info-title">&#128138; Medical Reference — Keep Offline</div>
+      <div class="med-info-row"><span class="med-info-key">Tejasvie blood grp</span><span class="med-info-val" id="tejBlood">—</span></div>
+      <div class="med-info-row"><span class="med-info-key">Mom blood group</span><span class="med-info-val" id="momBlood">—</span></div>
+      <div class="med-info-row"><span class="med-info-key">Mom condition</span><span class="med-info-val">Lupus (SLE) — on HCQS 200</span></div>
+      <div class="med-info-row"><span class="med-info-key">Tej — inhaler</span><span class="med-info-val">Revolizer (always accessible)</span></div>
+      <div class="med-info-row"><span class="med-info-key">Tej — migraine</span><span class="med-info-val">Nurtec ODT (in hand-bag)</span></div>
+    </div>
+
+    <!-- LIH / Tour contacts -->
+    <div class="contacts-section">
+      <div class="contacts-section-hdr"><span class="contacts-section-icon">&#127973;</span><span class="contacts-section-title">Leisure India Holidays (LIH)</span></div>
+      <div class="contact-row"><span class="contact-label">Mr. Himanshu</span><span class="contact-value">+91 98292-57777</span><a href="tel:+919829257777" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Mr. Hitesh</span><span class="contact-value">+91 98284-44735</span><a href="tel:+919828444735" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Mr. Anish</span><span class="contact-value">+91 79767-95056</span><a href="tel:+917976795056" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Customer Care</span><span class="contact-value">+91 97839-99966</span><a href="tel:+919783999966" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Email</span><span class="contact-value">charters@lih.travel</span><span class="contact-call">&#128231;</span></div>
+    </div>
+
+    <!-- Hospitals near each dham -->
+    <div class="contacts-section">
+      <div class="contacts-section-hdr"><span class="contacts-section-icon">&#127973;</span><span class="contacts-section-title">Nearest Medical — Each Dham</span></div>
+      <div class="contact-row"><span class="contact-label">Dehradun</span><span class="contact-value">Max Hospital — +91 135-2525-000</span><a href="tel:+911352525000" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Yamunotri area</span><span class="contact-value">CHC Barkot — +91 1374-223-022</span><a href="tel:+911374223022" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Gangotri area</span><span class="contact-value">CHC Harsil / Uttarkashi District Hospital</span><span class="contact-call">&#128205;</span></div>
+      <div class="contact-row"><span class="contact-label">Kedarnath</span><span class="contact-value">Base Camp Medical — on site at helipad</span><span class="contact-call">&#9968;&#65039;</span></div>
+      <div class="contact-row"><span class="contact-label">Badrinath</span><span class="contact-value">Badrinath Community Health Centre</span><span class="contact-call">&#128205;</span></div>
+    </div>
+
+    <!-- National emergency -->
+    <div class="contacts-section">
+      <div class="contacts-section-hdr"><span class="contacts-section-icon">&#128680;</span><span class="contacts-section-title">National Emergency Numbers</span></div>
+      <div class="contact-row"><span class="contact-label">Ambulance</span><span class="contact-value">108</span><a href="tel:108" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Police</span><span class="contact-value">100</span><a href="tel:100" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Uttarakhand Tourism</span><span class="contact-value">1364</span><a href="tel:1364" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Disaster Mgmt</span><span class="contact-value">1070</span><a href="tel:1070" class="contact-call">&#128222;</a></div>
+    </div>
+
+    <!-- Personal contacts (editable) -->
+    <div class="contacts-section">
+      <div class="contacts-section-hdr"><span class="contacts-section-icon">&#128101;</span><span class="contacts-section-title">Personal Emergency Contacts</span></div>
+      <div class="contact-row"><span class="contact-label">Contact 1 name</span><input class="contacts-editable" id="ec1name" placeholder="Name" style="max-width:120px"></div>
+      <div class="contact-row"><span class="contact-label">Contact 1 phone</span><input class="contacts-editable" id="ec1phone" type="tel" placeholder="+91 ..."><a href="#" onclick="callContact(1)" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Contact 2 name</span><input class="contacts-editable" id="ec2name" placeholder="Name" style="max-width:120px"></div>
+      <div class="contact-row"><span class="contact-label">Contact 2 phone</span><input class="contacts-editable" id="ec2phone" type="tel" placeholder="+91 ..."><a href="#" onclick="callContact(2)" class="contact-call">&#128222;</a></div>
+      <div class="contact-row"><span class="contact-label">Doctor name</span><input class="contacts-editable" id="ecDocName" placeholder="Dr. ..."></div>
+      <div class="contact-row"><span class="contact-label">Doctor phone</span><input class="contacts-editable" id="ecDocPhone" type="tel" placeholder="+91 ..."><a href="#" onclick="callContact('doc')" class="contact-call">&#128222;</a></div>
+      <div style="padding:10px 14px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+          <div><div style="font-size:9px;color:var(--muted);margin-bottom:3px;">TEJASVIE BLOOD GROUP</div><input class="contacts-editable" id="tejBloodInput" placeholder="e.g. B+"></div>
+          <div><div style="font-size:9px;color:var(--muted);margin-bottom:3px;">MOM BLOOD GROUP</div><input class="contacts-editable" id="momBloodInput" placeholder="e.g. O+"></div>
+        </div>
+        <button class="contacts-save-btn" onclick="saveContacts()">Save Contacts</button>
+        <div class="contacts-saved" id="contactsSaved"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEMORY LETTER + TRIP REPORT VIEW -->
+  <div id="memories_letterView" class="memories-letter-view" style="display:none">
+    <div class="exp-hero"><img id="memLetterHeroImg" alt="Adiyogi"><div class="exp-hero-ov"></div><div class="exp-hero-txt">Memory &amp; Report</div></div>
+    <div class="mem-letter-tabs">
+      <div class="mem-letter-tab active" onclick="showMemLetterTab('letter',this)">&#128140; Memory Letter</div>
+      <div class="mem-letter-tab" onclick="showMemLetterTab('report',this)">&#128203; Trip Report</div>
+    </div>
+
+    <!-- MEMORY LETTER -->
+    <div id="memLetterSection">
+      <div style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);letter-spacing:2px;margin-bottom:14px;opacity:0.6;">A LETTER TO MOMSA</div>
+      <div class="letter-wrap">
+        <div class="letter-prompt">Dear Momsa, this Chardham journey meant...</div>
+        <textarea class="letter-textarea" id="letterTej" placeholder="Write what this journey meant to you. What you felt at each dham. A moment you want Momsa to always remember. Something you could not say out loud..."></textarea>
+        <button class="letter-save-btn" onclick="saveLetter('tej')">Save My Letter</button>
+        <div class="letter-saved" id="letterTejSaved"></div>
+      </div>
+      <div style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);letter-spacing:2px;margin-bottom:14px;opacity:0.6;margin-top:6px;">A LETTER TO TEJ</div>
+      <div class="letter-wrap">
+        <div class="letter-prompt">Dear Tej, on this sacred journey I felt...</div>
+        <textarea class="letter-textarea" id="letterMom" placeholder="What Momsa wants Tej to know. A blessing. A prayer. A memory only mothers carry..."></textarea>
+        <button class="letter-save-btn" onclick="saveLetter('mom')">Save Mom's Letter</button>
+        <div class="letter-saved" id="letterMomSaved"></div>
+      </div>
+      <div id="letterPreviewArea" style="display:none">
+        <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(196,164,90,0.2),transparent);margin:16px 0;"></div>
+        <div style="font-family:'Cinzel',serif;font-size:10px;color:var(--gold);letter-spacing:2px;margin-bottom:10px;opacity:0.7;">SAVED LETTERS</div>
+        <div id="letterPreviewTej" class="letter-preview"></div>
+        <div id="letterPreviewMom" class="letter-preview" style="margin-top:10px;"></div>
+      </div>
+    </div>
+
+    <!-- TRIP REPORT CARD -->
+    <div id="memReportSection" style="display:none">
+      <div class="report-grade">
+        <div class="report-grade-title">YATRA COMPLETION</div>
+        <div class="report-grade-val" id="reportGradeEmoji">&#128591;</div>
+        <div class="report-grade-sub" id="reportGradeSub">Complete your yatra to unlock your report</div>
+      </div>
+      <div class="report-card-grid" id="reportStatsGrid"></div>
+      <div class="report-section">
+        <div class="report-section-title">&#128176; Budget Report</div>
+        <div id="reportBudgetRows"></div>
+      </div>
+      <div class="report-section">
+        <div class="report-section-title">&#128218; Journal Report</div>
+        <div id="reportJournalRows"></div>
+      </div>
+      <div class="report-section">
+        <div class="report-section-title">&#127535; Darshan Summary</div>
+        <div id="reportDarshanRows"></div>
+      </div>
+    </div>
   </div>
 
   <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
@@ -1140,6 +1329,15 @@ var DHAMS_WEATHER = [
   {name:'Badrinath', day:'Day 4 · 1 Jun',  lat:30.7433, lon:79.4938, alt:'3,133m', emoji:'🏔️'}
 ];
 var weatherLoaded = false;
+var weatherRefreshInterval = null;
+var WEATHER_REFRESH_MS = 3 * 60 * 60 * 1000; // 3 hours
+
+function startWeatherAutoRefresh() {
+  if(weatherRefreshInterval) clearInterval(weatherRefreshInterval);
+  weatherRefreshInterval = setInterval(function(){
+    loadWeather();
+  }, WEATHER_REFRESH_MS);
+}
 function loadWeather(){
   var grid = document.getElementById('weatherGrid');
   grid.innerHTML = '<div class="weather-loading" style="grid-column:1/-1">&#127774; Fetching live weather...</div>';
@@ -1188,6 +1386,14 @@ function wmoDesc(code){
 function renderWeather(results){
   var grid = document.getElementById('weatherGrid');
   grid.innerHTML = '';
+  // update timestamp
+  var ts = document.getElementById('weatherTimestamp');
+  if(ts){
+    var now = new Date();
+    var timeStr = now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+    var nextStr = new Date(now.getTime()+3*3600000).toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+    ts.textContent = 'Updated ' + timeStr + ' · Next refresh at ' + nextStr;
+  }
   results.forEach(function(r){
     var card = document.createElement('div');
     card.className = 'weather-card';
@@ -1491,7 +1697,7 @@ function renderChecklist(){
 function showView(view,el){
   document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
   el.classList.add('active');
-  ['packingView','purchaseView','memoriesView','expenseView','weatherView','itineraryView','checklistView'].forEach(function(id){
+  ['packingView','purchaseView','memoriesView','expenseView','weatherView','itineraryView','checklistView','contactsView','memories_letterView'].forEach(function(id){
     var v=document.getElementById(id);if(v)v.style.display='none';
   });
   var heroSrc = document.querySelector('.hero-img').src;
@@ -1503,7 +1709,7 @@ function showView(view,el){
   else if(view==='weather'){
     document.getElementById('weatherView').style.display='block';
     var wh=document.getElementById('weatherHeroImg');if(wh&&!wh.getAttribute('data-set')){wh.src=heroSrc2;wh.setAttribute('data-set','1');}
-    if(!weatherLoaded){loadWeather();weatherLoaded=true;}
+    if(!weatherLoaded){loadWeather();weatherLoaded=true;startWeatherAutoRefresh();}
   }
   else if(view==='itinerary'){
     document.getElementById('itineraryView').style.display='block';
@@ -1515,6 +1721,12 @@ function showView(view,el){
     document.getElementById('checklistView').style.display='block';
     var ch=document.getElementById('clHeroImg');if(ch&&!ch.getAttribute('data-set')){ch.src=heroSrc;ch.setAttribute('data-set','1');}
     renderChecklist();
+  } else if(view==='contacts'){
+    document.getElementById('contactsView').style.display='block';
+    initContactsView();
+  } else if(view==='memories_letter'){
+    document.getElementById('memories_letterView').style.display='block';
+    initMemLetterView();
   }
 }
 
@@ -1713,6 +1925,187 @@ function renderTripSummary() {
   setEl2('sumCardSpent',fmt(cardAll));
   var cb=document.getElementById('sumCashBalance');
   if(cb){cb.textContent=fmt(cashBal);cb.className='cash-rec-val '+(cashBal>=0?'pos':'neg');}
+}
+
+
+/* ═══════════════════════════════════
+   EMERGENCY CONTACTS
+═══════════════════════════════════ */
+var savedContacts = {};
+
+function saveContacts() {
+  savedContacts = {
+    ec1name: document.getElementById('ec1name').value,
+    ec1phone: document.getElementById('ec1phone').value,
+    ec2name: document.getElementById('ec2name').value,
+    ec2phone: document.getElementById('ec2phone').value,
+    ecDocName: document.getElementById('ecDocName').value,
+    ecDocPhone: document.getElementById('ecDocPhone').value,
+    tejBlood: document.getElementById('tejBloodInput').value,
+    momBlood: document.getElementById('momBloodInput').value,
+  };
+  // update medical reference card
+  var tb = document.getElementById('tejBlood');
+  var mb = document.getElementById('momBlood');
+  if(tb) tb.textContent = savedContacts.tejBlood || '—';
+  if(mb) mb.textContent = savedContacts.momBlood || '—';
+  var sv = document.getElementById('contactsSaved');
+  if(sv){sv.textContent='✓ Contacts saved';setTimeout(function(){if(sv)sv.textContent='';},2000);}
+}
+
+function callContact(id) {
+  var phone = '';
+  if(id===1) phone = document.getElementById('ec1phone').value;
+  else if(id===2) phone = document.getElementById('ec2phone').value;
+  else if(id==='doc') phone = document.getElementById('ecDocPhone').value;
+  if(phone) window.location.href='tel:'+phone.replace(/ /g,'');
+}
+
+function initContactsView() {
+  var img = document.getElementById('contactsHeroImg');
+  if(img && !img.getAttribute('data-set')){
+    img.src = document.querySelector('.shiva-ghost img').src;
+    img.setAttribute('data-set','1');
+  }
+  // restore saved values
+  ['ec1name','ec1phone','ec2name','ec2phone','ecDocName','ecDocPhone','tejBloodInput','momBloodInput'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el && savedContacts[id]) el.value = savedContacts[id];
+  });
+}
+
+/* ═══════════════════════════════════
+   MEMORY LETTER + TRIP REPORT
+═══════════════════════════════════ */
+var letters = {tej:'', mom:''};
+var memLetterCurrentTab = 'letter';
+
+function showMemLetterTab(tab, el) {
+  memLetterCurrentTab = tab;
+  document.querySelectorAll('.mem-letter-tab').forEach(function(t){t.classList.remove('active');});
+  el.classList.add('active');
+  document.getElementById('memLetterSection').style.display = tab==='letter' ? 'block' : 'none';
+  document.getElementById('memReportSection').style.display = tab==='report' ? 'block' : 'none';
+  if(tab==='report') renderTripReportCard();
+}
+
+function saveLetter(who) {
+  var ta = document.getElementById('letter'+who.charAt(0).toUpperCase()+who.slice(1));
+  var sv = document.getElementById('letter'+who.charAt(0).toUpperCase()+who.slice(1)+'Saved');
+  if(!ta) return;
+  letters[who] = ta.value.trim();
+  if(sv){sv.textContent='✓ Saved';setTimeout(function(){if(sv)sv.textContent='';},2000);}
+  renderLetterPreviews();
+}
+
+function renderLetterPreviews() {
+  var area = document.getElementById('letterPreviewArea');
+  var pt = document.getElementById('letterPreviewTej');
+  var pm = document.getElementById('letterPreviewMom');
+  var hasAny = letters.tej || letters.mom;
+  if(area) area.style.display = hasAny ? 'block' : 'none';
+  if(pt){
+    if(letters.tej){pt.style.display='block';pt.textContent='Dear Momsa,\n\n'+letters.tej+'\n\n— Tej';}
+    else pt.style.display='none';
+  }
+  if(pm){
+    if(letters.mom){pm.style.display='block';pm.textContent='Dear Tej,\n\n'+letters.mom+'\n\n— Momsa';}
+    else pm.style.display='none';
+  }
+}
+
+function renderTripReportCard() {
+  var all = allEntries();
+  var tripTotal = all.reduce(function(s,e){return s+e.amt;},0);
+  var journalCount = Object.keys(journalEntries).filter(function(k){return journalEntries[k]&&journalEntries[k].text;}).length;
+  var darshanCount = Object.keys(darshanDone).filter(function(k){return darshanDone[k];}).length;
+  var photoCount = photos.length;
+  var cashAll = all.filter(function(e){return e.mode==='Cash';}).reduce(function(s,e){return s+e.amt;},0);
+  var cashBal = (budgets.cash||0) - cashAll;
+
+  // grade
+  var score = 0;
+  if(darshanCount>=4) score+=40;
+  else score+=darshanCount*10;
+  if(journalCount>=4) score+=30;
+  else score+=journalCount*7;
+  if(photoCount>=10) score+=20;
+  else score+=photoCount*2;
+  if(budgets.total>0 && tripTotal<=budgets.total) score+=10;
+
+  var gradeEmoji = score>=90?'🌟':score>=70?'🙏':score>=50?'✨':score>=30?'🌿':'📿';
+  var gradeSub = score>=90?'Perfect Yatra — Har Har Mahadev!':score>=70?'A sacred journey well documented':score>=50?'Beautiful memories captured':score>=30?'Journey underway':darshanCount===0?'Complete your yatra to unlock your report':'Keep adding entries';
+
+  var ge = document.getElementById('reportGradeEmoji');
+  var gs = document.getElementById('reportGradeSub');
+  if(ge) ge.textContent = gradeEmoji;
+  if(gs) gs.textContent = gradeSub;
+
+  // stats grid
+  var sg = document.getElementById('reportStatsGrid');
+  if(sg) sg.innerHTML =
+    '<div class="report-stat"><div class="report-stat-icon">🛕</div><div class="report-stat-val">'+darshanCount+'/4</div><div class="report-stat-label">Dhams Visited</div></div>'+
+    '<div class="report-stat"><div class="report-stat-icon">✍️</div><div class="report-stat-val">'+journalCount+'</div><div class="report-stat-label">Journal Entries</div></div>'+
+    '<div class="report-stat"><div class="report-stat-icon">📸</div><div class="report-stat-val">'+photoCount+'</div><div class="report-stat-label">Photos Saved</div></div>'+
+    '<div class="report-stat"><div class="report-stat-icon">💰</div><div class="report-stat-val">'+(tripTotal?fmt(tripTotal):'—')+'</div><div class="report-stat-label">Total Spent</div></div>';
+
+  // budget rows
+  var br = document.getElementById('reportBudgetRows');
+  if(br){
+    var budgetStatus = budgets.total>0?(tripTotal<=budgets.total?'good':'bad'):'warn';
+    var budgetText = budgets.total>0?(tripTotal<=budgets.total?'Within budget ✓':fmt(tripTotal-budgets.total)+' over'):'No budget set';
+    br.innerHTML =
+      '<div class="report-row"><span class="report-row-label">Total spent</span><span class="report-row-val">'+fmt(tripTotal)+'</span></div>'+
+      '<div class="report-row"><span class="report-row-label">Budget set</span><span class="report-row-val">'+(budgets.total?fmt(budgets.total):'—')+'</span></div>'+
+      '<div class="report-row"><span class="report-row-label">Status</span><span class="report-row-val '+budgetStatus+'">'+budgetText+'</span></div>'+
+      '<div class="report-row"><span class="report-row-label">Cash balance</span><span class="report-row-val '+(cashBal>=0?'good':'bad')+'">'+fmt(cashBal)+'</span></div>'+
+      '<div class="report-row"><span class="report-row-label">Tejasvie paid</span><span class="report-row-val">'+fmt(all.filter(function(e){return e.payer==='Tejasvie';}).reduce(function(s,e){return s+e.amt;},0))+'</span></div>'+
+      '<div class="report-row"><span class="report-row-label">Mom paid</span><span class="report-row-val">'+fmt(all.filter(function(e){return e.payer==='Mom';}).reduce(function(s,e){return s+e.amt;},0))+'</span></div>';
+  }
+
+  // journal rows
+  var jr = document.getElementById('reportJournalRows');
+  if(jr){
+    jr.innerHTML='';
+    if(!journalCount){jr.innerHTML='<div style="font-size:11px;color:var(--muted);opacity:0.5;padding:8px 0;text-align:center;">No journal entries yet</div>';return;}
+    Object.keys(journalEntries).forEach(function(k){
+      var e=journalEntries[k]; if(!e||!e.text) return;
+      var d=JOURNAL_DAYS[parseInt(k)];
+      var row=document.createElement('div'); row.className='report-row';
+      var preview=e.text.slice(0,45)+(e.text.length>45?'…':'');
+      row.innerHTML='<span class="report-row-label">'+(e.mood?e.mood.emoji+' ':'')+d.label+'</span><span class="report-row-val" style="font-size:10px;color:var(--muted);font-weight:400;">'+preview+'</span>';
+      jr.appendChild(row);
+    });
+  }
+
+  // darshan rows
+  var dr = document.getElementById('reportDarshanRows');
+  if(dr){
+    var dhams=['yamunotri','gangotri','kedarnath','badrinath'];
+    var icons={'yamunotri':'🛕','gangotri':'🌊','kedarnath':'⛰️','badrinath':'🏔️'};
+    var names={'yamunotri':'Yamunotri','gangotri':'Gangotri','kedarnath':'Kedarnath','badrinath':'Badrinath'};
+    dr.innerHTML='';
+    dhams.forEach(function(d){
+      var done=darshanDone[d];
+      var row=document.createElement('div'); row.className='report-row';
+      row.innerHTML='<span class="report-row-label">'+icons[d]+' '+names[d]+'</span><span class="report-row-val '+(done?'good':'warn')+'">'+(done?'✓ Darshan done':'—')+'</span>';
+      dr.appendChild(row);
+    });
+  }
+}
+
+function initMemLetterView() {
+  var img = document.getElementById('memLetterHeroImg');
+  if(img && !img.getAttribute('data-set')){
+    img.src = document.querySelector('.hero-img').src;
+    img.setAttribute('data-set','1');
+  }
+  // restore letters
+  var ta1 = document.getElementById('letterTej');
+  var ta2 = document.getElementById('letterMom');
+  if(ta1 && letters.tej) ta1.value = letters.tej;
+  if(ta2 && letters.mom) ta2.value = letters.mom;
+  renderLetterPreviews();
 }
 
 </script>
