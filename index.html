@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Chardham Yatra 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0c0b09;--s1:#161411;--s2:#1e1b15;--s3:#232018;--border:rgba(196,164,90,0.08);--border2:rgba(196,164,90,0.16);--text:#cac3b5;--muted:#6a6358;--gold:#c4a45a;--teal:#6b9e98;--rust:#96613f;--tick:#527a74;--red:#884040;}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -471,6 +471,40 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
 .shiva-ghost{position:fixed;bottom:0;right:0;width:130px;height:190px;pointer-events:none;z-index:0;overflow:hidden;}
 .shiva-ghost img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.07) saturate(0.3);opacity:0.6;-webkit-mask-image:linear-gradient(to top left,rgba(0,0,0,0.5) 0%,transparent 70%);mask-image:linear-gradient(to top left,rgba(0,0,0,0.5) 0%,transparent 70%);}
 .footer{text-align:center;padding:28px 18px 20px;font-size:10px;color:var(--muted);opacity:0.3;letter-spacing:2px;font-family:'Cinzel',serif;position:relative;z-index:1;}
+/* ── JOURNEY VIEW ── */
+.journey-view{background:radial-gradient(circle at 20% 15%,rgba(201,138,118,0.10),transparent 45%),radial-gradient(circle at 85% 80%,rgba(176,141,63,0.10),transparent 45%),#fbf4ea;color:#3a322b;font-family:'Cormorant Garamond',serif;line-height:1.85;padding:5vw 0 7vw;border-radius:10px;overflow:hidden;}
+.journey-view .jpage{max-width:720px;margin:0 auto;padding:0 7vw;}
+.journey-view .jkicker{font-family:'Fraunces',serif;font-size:0.78rem;letter-spacing:0.42em;text-transform:uppercase;color:#c98a76;text-align:center;margin-bottom:1.4rem;animation:jrise 1s ease both;}
+.journey-view .jday-no{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(3.4rem,13vw,6rem);text-align:center;line-height:0.95;color:#3a322b;animation:jrise 1s ease 0.1s both;}
+.journey-view h1{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(1.6rem,5.5vw,2.6rem);text-align:center;color:#6f6253;margin-top:0.4rem;margin-bottom:0;animation:jrise 1s ease 0.2s both;}
+.journey-view .jornament{display:flex;align-items:center;justify-content:center;gap:1rem;margin:2.4rem 0 2.8rem;animation:jrise 1s ease 0.3s both;}
+.journey-view .jrule{height:1px;width:70px;background:linear-gradient(90deg,transparent,#b08d3f,transparent);}
+.journey-view p{font-size:1.28rem;margin-bottom:1.5rem;animation:jrise 1s ease both;}
+.journey-view .jlead::first-letter{font-family:'Fraunces',serif;font-size:3.6rem;float:left;line-height:0.8;padding:0.1em 0.12em 0 0;color:#c98a76;font-weight:400;}
+.journey-view .jscene{font-family:'Fraunces',serif;font-size:0.74rem;letter-spacing:0.34em;text-transform:uppercase;color:#b08d3f;margin:2.6rem 0 0.6rem;}
+.journey-view em{color:#c98a76;font-style:italic;}
+.journey-view .jclosing{font-family:'Fraunces',serif;font-style:italic;font-size:1.45rem;text-align:center;color:#6f6253;margin-top:3rem;padding-top:2.4rem;border-top:1px solid #e2d3bf;line-height:1.6;}
+.journey-view .jsign{text-align:center;margin-top:1.6rem;font-family:'Fraunces',serif;font-size:0.8rem;letter-spacing:0.3em;text-transform:uppercase;color:#c98a76;}
+.journey-view .jday-divider{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin:5.5rem 0 4.5rem;}
+.journey-view .jdrule{height:1px;flex:1;max-width:160px;background:linear-gradient(90deg,transparent,#e2d3bf,transparent);}
+.journey-view .jday-divider span{font-size:1.3rem;color:#b08d3f;}
+.journey-view .jfactbox{background:rgba(255,255,255,0.45);border:1px solid #e2d3bf;border-radius:14px;padding:1.8rem 2rem;margin:2.2rem 0;animation:jrise 1s ease both;}
+.journey-view .jfactbox h3{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:1.3rem;color:#c98a76;margin-bottom:1rem;text-align:center;}
+.journey-view .jfactbox dl{display:grid;grid-template-columns:auto 1fr;gap:0.55rem 1.2rem;}
+.journey-view .jfactbox dt{font-family:'Fraunces',serif;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#b08d3f;align-self:center;}
+.journey-view .jfactbox dd{font-size:1.12rem;color:#3a322b;}
+.journey-view .jrudra{display:block;margin:0 auto;width:38px;height:auto;}
+.journey-view .jrudra-row{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin:1.4rem 0;}
+.journey-view .jrr-rule{height:1px;flex:1;max-width:120px;background:linear-gradient(90deg,transparent,#b08d3f,transparent);}
+.journey-view .jshrine{margin:3rem auto 2.4rem;text-align:center;animation:jrise 1.2s ease both;}
+.journey-view .jshrine svg{width:min(280px,70%);height:auto;}
+.journey-view .jverse{margin:2.6rem auto;max-width:540px;text-align:center;padding:1.8rem 1.6rem;background:radial-gradient(circle at 50% 0%,rgba(176,141,63,0.10),transparent 70%),rgba(255,255,255,0.40);border-top:1px solid #e2d3bf;border-bottom:1px solid #e2d3bf;animation:jrise 1s ease both;}
+.journey-view .jsanskrit{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;color:#c98a76;letter-spacing:0.04em;line-height:1.9;}
+.journey-view .jtranslit{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:#b08d3f;margin-top:0.6rem;}
+.journey-view .jmeaning{font-family:'Cormorant Garamond',serif;font-size:1.18rem;color:#6f6253;margin-top:0.9rem;line-height:1.6;}
+.journey-view .jsrc{font-family:'Fraunces',serif;font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:#b08d3f;margin-top:1.1rem;}
+.journey-view .jday2-placeholder{text-align:center;padding:3rem 2rem;color:#6f6253;font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;border-top:1px solid #e2d3bf;margin-top:2rem;}
+@keyframes jrise{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 </style>
 </head>
 <body>
@@ -541,6 +575,7 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
     <div class="nav-btn" onclick="showView('checklist',this)">&#9989; Pre-Trip</div>
     <div class="nav-btn" onclick="showView('contacts',this)">&#128222; Contacts</div>
     <div class="nav-btn" onclick="showView('memories_letter',this)">&#128140; Memory</div>
+    <div class="nav-btn" onclick="showView('journey',this)">&#128214; Journey</div>
   </div>
   <!-- SYNC STATUS BAR -->
   <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;min-height:16px;">
@@ -930,6 +965,195 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
         <div class="report-section-title">&#127535; Darshan Summary</div>
         <div id="reportDarshanRows"></div>
       </div>
+    </div>
+  </div>
+
+  <!-- ══ JOURNEY VIEW ══ -->
+  <div id="journeyView" class="journey-view" style="display:none">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="jtrishul" viewBox="0 0 40 90">
+          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="20" y1="20" x2="20" y2="82"/>
+            <path d="M20 20 C 20 8, 12 6, 8 14 C 6 19, 9 24, 12 22"/>
+            <path d="M20 20 C 20 8, 28 6, 32 14 C 34 19, 31 24, 28 22"/>
+            <path d="M20 4 L20 26"/>
+            <path d="M8 14 L4 18 M32 14 L36 18"/>
+            <path d="M11 54 q9 -7 18 0 q-9 7 -18 0 Z"/>
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="jpage" style="text-align:center;margin-bottom:0.5rem;">
+      <svg class="jrudra" style="color:#b08d3f;width:46px;margin-top:0.5rem;"><use href="#jtrishul"/></svg>
+    </div>
+
+    <div class="jpage">
+
+      <!-- ══ DAY ZERO ══ -->
+      <div class="jkicker">Journey with Momsa</div>
+      <div class="jday-no">Day Zero</div>
+      <h1>The Day the Mountains Began Calling</h1>
+      <div class="jornament">
+        <div class="jrule"></div>
+        <svg class="jrudra" style="color:#b08d3f;width:30px;"><use href="#jtrishul"/></svg>
+        <div class="jrule"></div>
+      </div>
+      <p class="jlead">The house was still half-asleep when we left, around half past seven, the four of us moving softly into the morning. My brother, my father, my mother and me, all of us a little quiet, a little excited. At the airport, Mom and I walked ahead together, side by side, the way we always seem to fall into step, and then Dad caught up and joined us, and for a moment it was just us being a family in motion.</p>
+      <p>We sat down to the kind of breakfast that tastes like home no matter where you are. Idli, sambar, and vada, warm and familiar. When we learned the flight was delayed, there was no panic in it, only a soft <em>okay, let us just sit a while</em>. And we did. Mom picked up her camera and caught us all in those waiting-room moments, the photos turning ordinary time into something we will want to keep.</p>
+      <p class="jscene">Up Into the Sky</p>
+      <p>Then it was time to fly to Dehradun, and time to say goodbye to Dad. We boarded, and the flight was gentle and easy. I let myself drift into something to listen to, and Mom had her own little world of downloads waiting for her. Two of us, side by side, each in our own quiet, and somehow still together.</p>
+      <p class="jscene">Arriving</p>
+      <p>We landed, gathered our luggage, and a driver was already waiting to carry us off to the hotel. And oh, that lobby. So beautiful that I turned to look at Mom and saw her whole face glow, the way a child's does when something is more lovely than expected. A crisp apple welcome drink, a smooth check-in, and then our room, soft and warm, looking out over the malls and a forest reserve stretching wide and green beyond the glass.</p>
+      <p>We rested, and then hunger found us. A rich, indulgent khichdi arrived with pav bhaji, the kind of meal that asks you to slow down and stay a while. We ate, we relaxed, and Mom dozed off mid-afternoon while I fiddled with my phone, until sleep gently took me too. A good lunch, a good rest, the day folding itself kindly around us.</p>
+      <p class="jscene">Evening, Quiet and Tender</p>
+      <p>Dinner was light, just some fruits and a little cake. The Pepsi was admittedly not the wisest pairing, but it was vacation, and vacation forgives these small things. Before heading up, we clicked a few more pictures, and someone came by to brief us about tomorrow, the timings, the packing, the weight limits. All the worry I had been carrying in my head about being overweight slowly, quietly settled and went still.</p>
+      <p>Back in the room, we began to pack. There was a small ruffle between Mom and me, a little fight, and I felt myself go tender and overflow, and I cried. But it passed the way these things do between people who love each other deeply, and soon we were soft again, folding clothes side by side, everything mended.</p>
+      <div class="jclosing">
+        Tomorrow is the real beginning.<br>
+        The first Dham awaits, and my heart is already<br>
+        leaning toward those mountains.
+      </div>
+      <div class="jsign">End of Day Zero</div>
+
+      <!-- divider -->
+      <div class="jday-divider">
+        <div class="jdrule"></div>
+        <span>❀</span>
+        <div class="jdrule"></div>
+      </div>
+
+      <!-- ══ DAY ONE ══ -->
+      <div class="jkicker">Journey with Momsa</div>
+      <div class="jday-no">Day One</div>
+      <h1>The First Dham, and the Smallness of Being Human</h1>
+      <div class="jornament">
+        <div class="jrule"></div>
+        <svg class="jrudra" style="color:#b08d3f;width:30px;"><use href="#jtrishul"/></svg>
+        <div class="jrule"></div>
+      </div>
+      <p class="jlead">We woke into the dark, around quarter past four, the world outside still hushed and unstirred. Mom got ready first, then me, and we had asked for our breakfast to be packed so we could carry the morning with us. We ran a touch late, but somehow still made it to the helipad in time. The driver called at half past five, and off we went into the cold blue hour.</p>
+      <p>It was our very first time stepping into a chopper, and the excitement sat right at the surface of us. I was still carrying that small worry about the overweight luggage, but how glad I was when everything simply sorted itself out. Nothing was asked to be removed, no drama, no argument, no discussion. It went smoothly, the way you quietly hope things will but rarely expect.</p>
+      <p class="jscene">Closer to the Sky</p>
+      <p>After our procedures and the briefing, we reached the helipad and walked up close to the chopper. I was so excited, and the view was already so good that we stopped to click some lovely pictures. I could see Mom lit up with the same thrill, and that made it all the sweeter.</p>
+      <p>Then our journey lifted off. I sat up in the front, right beside the pilot, and he pointed out the places below, Mussoorie laid out small and far, the Yamuna glacier, and how the river is born from those mountains. It was my first time seeing the pilot's deck, all of it open and surreal before me. So many mountains, one after another, and I felt that quiet ache of wonder. Mountains and humans, what a wonderful creation this is, and what a small speck a person truly is. It reminded me that we come as dust and we go as dust.</p>
+      <p class="jscene">The First Dham</p>
+      <p>We stepped down from the helicopter and reached the hotel, where we had poha for breakfast and a nice warming chai. We decided to leave our luggage at the reception and carry on light. Our visit to the first Dham felt both exciting and deeply grounding. We began chanting for Lord Shiva, praying as we went, and made our way up the mountain by palki, where four people lift you and carry you toward the top.</p>
+
+      <div class="jshrine">
+        <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" aria-label="Lord Shiva meditating in the Himalayas">
+          <defs>
+            <radialGradient id="jhalo" cx="50%" cy="38%" r="42%">
+              <stop offset="0%" stop-color="#e9c87a" stop-opacity="0.9"/>
+              <stop offset="55%" stop-color="#e9c87a" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#e9c87a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <path d="M0 200 L70 120 L120 175 L180 95 L250 180 L320 130 L320 260 L0 260 Z" fill="#e7d6bf" opacity="0.55"/>
+          <path d="M0 220 L60 165 L130 215 L200 150 L270 210 L320 175 L320 260 L0 260 Z" fill="#d9c3a4" opacity="0.6"/>
+          <circle cx="160" cy="100" r="120" fill="url(#jhalo)"/>
+          <g fill="none" stroke="#8a6a3a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M138 36 a14 14 0 1 0 12 4"/>
+            <path d="M160 24 C150 30 150 42 156 50"/>
+            <circle cx="160" cy="70" r="20"/>
+            <path d="M154 64 q6 -4 12 0" stroke-width="1.6"/>
+            <path d="M160 90 L160 150"/>
+            <path d="M160 150 q-40 6 -52 34 q34 10 52 4 q18 6 52 -4 q-12 -28 -52 -34 Z"/>
+            <path d="M160 104 q-34 6 -44 38"/>
+            <path d="M160 104 q34 6 44 38"/>
+            <line x1="250" y1="40" x2="250" y2="200"/>
+            <path d="M250 40 C250 24 240 22 236 32 M250 40 C250 24 260 22 264 32 M250 18 L250 50"/>
+          </g>
+          <path d="M150 46 q-10 18 -28 30 q-18 12 -30 50" fill="none" stroke="#9bb6c4" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="jverse">
+        <div class="jsanskrit">&#x0950; &#x0928;&#x092E;&#x0903; &#x0936;&#x093F;&#x0935;&#x093E;&#x092F;</div>
+        <div class="jtranslit">Om Namah Shivaya</div>
+        <div class="jmeaning">I bow to Shiva, the auspicious one, the stillness within all that moves. As we climbed, this was the breath beneath every step.</div>
+        <div class="jsrc">The Five-Syllable Prayer</div>
+      </div>
+
+      <div class="jfactbox">
+        <h3>About Yamunotri</h3>
+        <dl>
+          <dt>Height</dt><dd>About 3,293 metres (10,804 feet) above sea level, in the Garhwal Himalayas of Uttarkashi, Uttarakhand.</dd>
+          <dt>The River</dt><dd>The temple is dedicated to Goddess Yamuna and marks the sacred source of the Yamuna river. The true glacial source lies higher still, at Saptarishi Kund near the Champasar glacier, around 4,421 metres.</dd>
+          <dt>The Trek</dt><dd>Roughly 5.5 to 6 km on foot from Janki Chatti, the road's end, with steep climbs, narrow paths and stream crossings. Pilgrims walk, ride ponies, or are carried by palki.</dd>
+          <dt>Weather</dt><dd>Cool even in summer, often 10 to 20 degrees, with sudden rain and chill. Snowbound and below freezing in winter, so the shrine opens only about half the year, from around April to just after Diwali.</dd>
+          <dt>Importance</dt><dd>One of the four Char Dham shrines, alongside Gangotri, Kedarnath and Badrinath. Built in the 19th century by the royal house of Tehri Garhwal. Legend says sage Asit Muni's penance here brought the Yamuna forth, and a bath in her waters is said to wash away one's sins.</dd>
+          <dt>Surya Kund</dt><dd>A natural hot spring beside the temple, its water hot enough to cook rice and potatoes, used to prepare the prasad offered to the goddess.</dd>
+        </dl>
+      </div>
+
+      <p class="jscene">The Climb</p>
+      <p>And so our journey began, the views unfolding so beautifully around us. The weather was eleven degrees, slightly chill but kind. Then it started to drizzle, and we pulled out our raincoats and carried on, mesmerised by how wondrous all of creation is. Out of the many of us walking, only about a tenth were on palki, and that alone made me realise how grateful we must be to Lord Shiva for making this happen for us.</p>
+      <p>The walk was extremely difficult. Even to look at that 6.5 km trek was humbling, because it was nothing like a normal trek, full of ups and downs and steep slopes you cannot manage without a stick. The palki ride had its own fear in it too, because these are human beings carrying you, and something in me ached knowing they were being troubled for my sake. Somewhere between the experience of God and the realising of all we are blessed with, I felt deeply grounded. And all along I kept looking after Mom, watching whether she was alright, whether she could hold up through it.</p>
+
+      <div class="jverse">
+        <div class="jsanskrit">&#x092E;&#x0943;&#x0924;&#x094D;&#x092F;&#x094B;&#x0930;&#x094D;&#x092E;&#x093E; &#x0905;&#x092E;&#x0943;&#x0924;&#x0902; &#x0917;&#x092E;&#x092F;</div>
+        <div class="jtranslit">Mrityor ma amritam gamaya</div>
+        <div class="jmeaning">Lead me from death to immortality. Shiva, the great ascetic, wears ash to remember that the body returns to dust, and only the soul endures. On that steep path I felt it in my bones, how small and how held we are.</div>
+        <div class="jsrc">From the Pavamana Mantra</div>
+      </div>
+
+      <p>On the way to Yamunotri we saw so many gorges flowing through, water finding its path down the rock. I kept turning to Mom, how is she doing, how is she keeping up, but more than anything it was something so personal between the two of us, simply bonding over this journey together. We took breaks in between and stopped many times. The trek is only about 6.7 km, yet it took us close to four and a half hours to reach the top, and through all of it I was praying continuously to Lord Shiva, feeling more grounded and more connected to the place with every step.</p>
+      <p class="jscene">At the Top</p>
+      <p>And then we reached Yamunotri. We saw Surya Kund, the spring whose water runs warm, while just five steps behind us the floor felt very, very cold, and five steps ahead it turned hot and warm beneath our feet. That, I think, is the beauty of this place. Even as science plays its own quiet magic, there is so much spiritual and religious grounding woven through it all.</p>
+      <p>We did a very nice puja, though it was so crowded, and took a couple of pictures and gathered Yamuna water. We prayed for our parents, for Dad, for Sashi puja, and for all my dear ones. It truly felt so connected, as though the whole web of people we love had come up the mountain with us.</p>
+
+      <div class="jrudra-row">
+        <div class="jrr-rule"></div>
+        <svg class="jrudra" style="color:#c98a76;width:34px;"><use href="#jtrishul"/></svg>
+        <div class="jrr-rule"></div>
+      </div>
+
+      <div class="jverse">
+        <div class="jsanskrit">&#x0915;&#x0930;&#x094D;&#x092A;&#x0942;&#x0930;&#x0917;&#x094C;&#x0930;&#x0902; &#x0915;&#x0930;&#x0941;&#x0923;&#x093E;&#x0935;&#x0924;&#x093E;&#x0930;&#x092E;&#x094D;</div>
+        <div class="jtranslit">Karpura-gauram karunavataram</div>
+        <div class="jmeaning">White as camphor, an incarnation of compassion, I bow to Shiva who dwells forever within the heart. Standing where warm and cold met beneath our feet, it felt as though he had been waiting here all along.</div>
+        <div class="jsrc">A Shiva Dhyana Verse</div>
+      </div>
+
+      <p class="jscene">Coming Down</p>
+      <p>Then we began our descent, and the return was not easy. It carried its own share of ups and downs, and then the rain came down so heavily, with a hailstorm folded into it. My hands went cold and numb, and the path turned risky, people skidding here and there. I worried for the men carrying me, and it felt so hard simply to sit still through it. But thank you, Lord Shiva, for carrying us through.</p>
+      <p>We reached a point where we were extremely cold, cramps spreading all over the body, so we warmed ourselves, had a few snacks, and carried on. Mom looked so fulfilled, and seeing her smile was everything to me, the whole reason folded into one expression.</p>
+      <p class="jscene">Back, and Warm Again</p>
+      <p>Once we were back, I realised I had mixed up the numbering of the bags, a small thing that kept hovering in my head. We changed out of our wet clothes and relaxed a little. I tried to sleep but it would not come. We had lunch, aloo matar with rice and dal and a single roti, such a simple, sweet, cute little meal that filled the tummy and sent us back to rest. The night turned colder still, but with all our warmers around us it became easier to move through. Sleep stayed light and shy, but my heart is already turning, soft and eager, toward day two.</p>
+      <p class="jscene">The Talk That Held Everything</p>
+      <p>And then, somewhere in the quiet of that cold night, Mom and I began to talk. Really talk. We spoke about life, about sugar, about Dad, about the things that usually stay tucked away inside us. Everything felt so intense and so deep, and the deeper we went the more connected I felt to her, to the quiet spiritual power she carries that I do not think she even knows she has.</p>
+      <p>It was the most natural talk, with no barriers, no age between us, no judgment waiting on the other side of a sentence. Just two people who love each other, finally meeting in the open. That is the room I had needed so badly, for so long. And tonight, on this cold mountain, she gave it to me without my even having to ask.</p>
+
+      <div class="jrudra-row">
+        <div class="jrr-rule"></div>
+        <svg class="jrudra" style="color:#c98a76;width:34px;"><use href="#jtrishul"/></svg>
+        <div class="jrr-rule"></div>
+      </div>
+
+      <div class="jclosing">
+        We came as dust and we go as dust,<br>
+        yet today the mountains let us walk among them,<br>
+        and Mom's smile made all of it holy.
+      </div>
+      <div class="jsign">End of Day One</div>
+
+      <!-- divider -->
+      <div class="jday-divider">
+        <div class="jdrule"></div>
+        <span>❀</span>
+        <div class="jdrule"></div>
+      </div>
+
+      <!-- ══ DAY TWO — placeholder ══ -->
+      <div class="jkicker">Journey with Momsa</div>
+      <div class="jday-no">Day Two</div>
+      <h1>Coming Soon</h1>
+      <div class="jday2-placeholder">
+        The story of Day Two is still being written.<br>Share the next chapter when it's ready.
+      </div>
+
     </div>
   </div>
 
@@ -1959,7 +2183,7 @@ function renderChecklist(){
 function showView(view,el){
   document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
   el.classList.add('active');
-  ['packingView','purchaseView','memoriesView','expenseView','weatherView','itineraryView','checklistView','contactsView','memories_letterView'].forEach(function(id){
+  ['packingView','purchaseView','memoriesView','expenseView','weatherView','itineraryView','checklistView','contactsView','memories_letterView','journeyView'].forEach(function(id){
     var v=document.getElementById(id);if(v)v.style.display='none';
   });
   var heroSrc = document.querySelector('.hero-img').src;
@@ -1989,6 +2213,8 @@ function showView(view,el){
   } else if(view==='memories_letter'){
     document.getElementById('memories_letterView').style.display='block';
     initMemLetterView();
+  } else if(view==='journey'){
+    document.getElementById('journeyView').style.display='block';
   }
 }
 
