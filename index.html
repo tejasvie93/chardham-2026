@@ -505,6 +505,101 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text)
 .journey-view .jsrc{font-family:'Fraunces',serif;font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:#b08d3f;margin-top:1.1rem;}
 .journey-view .jday2-placeholder{text-align:center;padding:3rem 2rem;color:#6f6253;font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;border-top:1px solid #e2d3bf;margin-top:2rem;}
 @keyframes jrise{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── GLOBAL MOBILE POLISH ── */
+*{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+input,select,textarea{font-size:16px!important;} /* prevent iOS zoom on focus */
+body{-webkit-font-smoothing:antialiased;}
+.day-tabs-wrap,.itin-day-tabs,.journal-day-tabs,.dham-filters,.filter-tabs{-webkit-overflow-scrolling:touch;}
+
+/* ── SMALL PHONES  ≤ 430px ── */
+@media(max-width:430px){
+  /* Hero */
+  .hero{height:260px;}
+  .hero-title{font-size:19px;letter-spacing:3px;}
+  .img-strip{height:72px;}
+
+  /* Content */
+  .content{padding:14px 10px;}
+
+  /* Nav: tighter so 5 cols still fit */
+  .top-nav{grid-template-columns:repeat(5,1fr);gap:5px;}
+  .nav-btn{padding:10px 2px;font-size:9.5px;min-height:42px;display:flex;align-items:center;justify-content:center;}
+
+  /* Touch-friendly tap targets */
+  .item{padding:11px 12px;min-height:44px;}
+  .tab{padding:7px 10px;min-height:34px;font-size:11px;}
+  .section-header{padding:10px 12px;}
+
+  /* Filter / dham tabs wrap nicely */
+  .filter-tabs,.dham-filters{gap:5px;}
+
+  /* Gallery */
+  .gallery-grid{gap:6px;}
+  .gallery-item-caption{font-size:9.5px;}
+
+  /* Weather: single column on narrow screens */
+  .weather-grid{grid-template-columns:1fr;}
+
+  /* Darshan grid stays 2-col */
+  .darshan-grid{grid-template-columns:repeat(2,1fr);}
+
+  /* Day tab scrolling */
+  .day-tabs-wrap{padding-bottom:6px;}
+  .day-tab,.itin-day-tab,.journal-day-tab{padding:7px 13px;white-space:nowrap;}
+
+  /* Itinerary blocks */
+  .itin-block{gap:10px;}
+  .itin-content{padding-bottom:12px;}
+
+  /* PIN gate */
+  .pin-hero{height:145px;margin-bottom:18px;}
+  .pin-hero-title{font-size:16px;letter-spacing:3px;}
+  .pin-btn{padding:13px 8px;}
+  .pin-btn-num{font-size:20px;}
+  .pin-wrap{max-width:100%;}
+  .pin-pad{gap:8px;}
+
+  /* Memory letter tabs */
+  .mem-letter-tab{font-size:10.5px;padding:9px 4px;}
+
+  /* Lightbox */
+  .lightbox img{max-width:96vw;max-height:62vh;}
+  .lightbox-caption-area{max-width:94vw;}
+
+  /* Caption sheet */
+  .caption-sheet{padding:16px 14px 28px;}
+
+  /* Journey view */
+  .journey-view{padding:8vw 0 10vw;}
+  .journey-view .jpage{padding:0 5vw;}
+  .journey-view p{font-size:1.08rem;}
+  .journey-view h1{font-size:clamp(1.3rem,5vw,2rem);}
+  .journey-view .jfactbox{padding:1.3rem 1rem;}
+  .journey-view .jfactbox dl{grid-template-columns:1fr;gap:0.25rem 0;}
+  .journey-view .jfactbox dt{margin-top:0.55rem;}
+  .journey-view .jclosing{font-size:1.25rem;}
+  .journey-view .jsanskrit{font-size:1.3rem;}
+  .journey-view .jmeaning{font-size:1.05rem;}
+
+  /* Report grid */
+  .report-card-grid{grid-template-columns:1fr;}
+
+  /* Shiva ghost smaller on mobile */
+  .shiva-ghost{width:100px;height:150px;}
+}
+
+/* ── VERY SMALL PHONES  ≤ 360px ── */
+@media(max-width:360px){
+  .content{padding:12px 8px;}
+  .top-nav{grid-template-columns:repeat(3,1fr);gap:5px;}
+  .nav-btn{font-size:10px;padding:10px 4px;}
+  .hero{height:230px;}
+  .hero-title{font-size:17px;}
+  .pin-hero{height:130px;}
+  .pin-btn{padding:11px 6px;}
+  .pin-btn-num{font-size:18px;}
+}
 </style>
 </head>
 <body>
