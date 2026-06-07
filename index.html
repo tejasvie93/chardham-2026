@@ -1037,6 +1037,9 @@ body{-webkit-font-smoothing:antialiased;}
 </div>
 
 <script>
+var pinCurrent = '';
+var pinLocked = false;
+
 
 /* ═══════════════════════════════════
    SUPABASE CONFIG & CLIENT
@@ -1284,7 +1287,7 @@ function ownerBadge(o){
 }
 
 function makeInterstitial(){
-  var imgs=[document.querySelector('.hero-img').src, document.querySelector('.shiva-ghost img').src];
+  var imgs=[document.querySelector('.hero-img').src, (document.querySelector('.shiva-ghost img') || document.querySelector('.hero-img') || {src:''}).src];
   var labels=['Om Namah Shivaya','Har Har Mahadev','Adiyogi'];
   var src=imgs[interCount%2]; var lbl=labels[interCount%3]; interCount++;
   var d=document.createElement('div'); d.className='shiva-interstitial';
@@ -2053,7 +2056,7 @@ function showView(view,el){
     var v=document.getElementById(id);if(v)v.style.display='none';
   });
   var heroSrc = document.querySelector('.hero-img').src;
-  var heroSrc2 = document.querySelector('.shiva-ghost img').src;
+  var heroSrc2 = (document.querySelector('.shiva-ghost img') || document.querySelector('.hero-img') || {src:''}).src;
   
   if(view==='memories'){document.getElementById('memoriesView').style.display='block';renderGallery();}
   else if(view==='weather'){
@@ -2081,7 +2084,8 @@ window.addEventListener('scroll',function(){
   if(h)h.style.transform='translateY('+window.scrollY*0.22+'px)';
 });
 /* hero crossfade */
-var hImgs=[document.querySelector('.hero-img').src, document.querySelector('.shiva-ghost img').src];
+var heroImgEl = document.querySelector('.hero-img');
+var hImgs = heroImgEl ? [heroImgEl.src, heroImgEl.src] : ['',''];
 var hIdx=0;
 document.getElementById('heroImg').style.transition='opacity 0.6s ease';
 setInterval(function(){
@@ -2090,7 +2094,6 @@ setInterval(function(){
   if(h){h.style.opacity='0';setTimeout(function(){h.src=hImgs[hIdx];h.style.opacity='1';},650);}
 },9000);
 
-renderPacking();
 
 window.addEventListener('load', function(){ loadAllFromSupabase(); });
 
@@ -2307,7 +2310,7 @@ function callContact(id) {
 function initContactsView() {
   var img = document.getElementById('contactsHeroImg');
   if(img && !img.getAttribute('data-set')){
-    img.src = document.querySelector('.shiva-ghost img').src;
+    img.src = (document.querySelector('.shiva-ghost img') || document.querySelector('.hero-img') || {src:''}).src;
     img.setAttribute('data-set','1');
   }
   // restore saved values
@@ -2462,8 +2465,7 @@ function initMemLetterView() {
    PIN GATE
 ═══════════════════════════════════ */
 var PIN_CORRECT = '2905'; // 29th May — flying date
-var pinCurrent = '';
-var pinLocked = false;
+// pinCurrent declared earlier
 
 // Set hero image once DOM is ready
 (function(){
